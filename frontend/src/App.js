@@ -16,10 +16,10 @@ const App = () => {
     <div className="App">
       {/* ===== Header ===== */}
       <header className="app-header">
-        <div className="header-logo">🎓</div>
+        <div className="header-logo"></div>
         <div className="header-text">
           <h1>Student Feedback System</h1>
-          <p>Faculty of Information & Communication Technology</p>
+
           <p className="university-name">
             Limkokwing University of Creative Technology
           </p>

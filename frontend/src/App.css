@@ -1,0 +1,138 @@
+/* ===========================
+   General App Styling
+=========================== */
+body {
+  margin: 0;
+  background: #f5f7fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===========================
+   Header
+=========================== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 25px 15px;
+  border-bottom: 5px solid #312e81;
+  text-align: center;
+}
+
+.header-logo {
+  font-size: 45px;
+  margin-right: 15px;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-text p {
+  margin: 2px 0;
+  font-size: 15px;
+}
+
+.university-name {
+  font-style: italic;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===========================
+   Tabs Navigation
+=========================== */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 25px;
+  cursor: pointer;
+  color: #4b5563;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #4338ca;
+}
+
+.tab-btn.active {
+  border-bottom: 3px solid #4f46e5;
+  color: #4f46e5;
+}
+
+/* ===========================
+   Main Content
+=========================== */
+.app-main {
+  flex: 1;
+  padding: 20px;
+  background: #f9fafb;
+}
+
+.section {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.app-footer {
+  background: #111827;
+  color: #d1d5db;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  border-top: 3px solid #4f46e5;
+}
+
+/* ===========================
+   Animations
+=========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .tab-btn {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+  }
+
+  .header-logo {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,103 @@
+/* ================== Feedback Form ================== */
+.feedback-form-container {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.feedback-form-container h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.feedback-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form-container input,
+.feedback-form-container select,
+.feedback-form-container textarea {
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.feedback-form-container input:focus,
+.feedback-form-container select:focus,
+.feedback-form-container textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+}
+
+.feedback-form-container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.feedback-form-container button {
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feedback-form-container button:hover {
+  background-color: #4338ca;
+}
+
+.feedback-form-container button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.feedback-form-container .error-message {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.feedback-form-container .success-message {
+  color: #16a34a;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.feedback-form-container .spinner {
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #4f46e5;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .feedback-form-container {
+    padding: 20px;
+  }
+}

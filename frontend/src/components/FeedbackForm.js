@@ -15,15 +15,23 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
   const [successMessage, setSuccessMessage] = useState('');
 
   // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+ const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  // Only allow letters and spaces for studentName
+  if (name === 'studentName') {
+    const lettersOnly = value.replace(/[^a-zA-Z\s]/g, ''); // remove numbers/special chars
+    setFormData(prev => ({ ...prev, [name]: lettersOnly }));
+  } else {
     setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Clear error for this field when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
+  }
+
+  // Clear error for this field when user starts typing
+  if (errors[name]) {
+    setErrors(prev => ({ ...prev, [name]: '' }));
+  }
+};
+
 
   // Validate form
   const validateForm = () => {

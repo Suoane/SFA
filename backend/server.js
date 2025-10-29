@@ -19,6 +19,9 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'feedback_db',
   port: process.env.DB_PORT || 5432,
+  ssl: {
+    rejectUnauthorized: false, // Allow self-signed certificates (required on Render)
+  },
 });
 
 pool.connect()
